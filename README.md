@@ -1,2 +1,3 @@
 # Adatraining
-ADA Training
+
+ADA ile ilgili yaptığımız çalışmaları buraya yükleyip. Bu çalışmaları birlikte incelemek.
