@@ -1,0 +1,16 @@
+- Procedures are similar to functions in C or C++ that return void
+-  The "in" operator in Ada tests whether a scalar value is within a specified range and returns a Boolean result.
+	for I in 1 .. 5 loop
+
+- "reverse" keyword ü ile loop lar ters çalıştırılır.
+	for I in reverse 1 .. 5 loop
+
+- Integer'Image fonksiyonu integer bir değişkeni stringe çeviren cast fonksiyonudur.
+	Put_Line ("Hello, World!" & Integer'Image (5));
+	
+- & işareti string değişkenleri birbirne bağlamak için kullanılır
+	 Put_Line ("Hi " & Name & "!");
+	 
+- Değişken tanımlamalarını procedure lerin begin state'inden önce yapılmalıdır. Eğer begin state'inden sonra yapılacaksa "declare" keyword ile değişken tanımlaması yapılabilir.
+	  declare
+         Name : String := Get_Line;
