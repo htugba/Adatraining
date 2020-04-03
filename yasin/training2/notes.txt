@@ -1,0 +1,86 @@
+- iki farklı subprogram çeşidi vardır birisi "procedures" diğer ise "functions"
+	procedures -> return yapmazlar
+	functions -> return yapmak zorundalar
+	
+- Fonksiyonlarda parametrelere default değişken atanabilir. Herhangi bir yerden fonksiyon parametre göndermeden çalıştırılırsa bu default değerlere göre çalışır.
+	function Increment_By
+			(I    : Integer := 0;
+			Incr : Integer := 1) return Integer;
+				
+	Burada iki parametre için default değişkenler tanımlanmıştır. "  C := Increment_By; " bu şekil bir fonksiyon çağrımında java'da hata atması beklenirken ADA'da default parametlere göre işlem yapılır.
+	Eğer parametrelere default değişken verilmezse "  C := Increment_By; " bu şekilde çağrım yapılamaz compile time hatası verir.8
+	
+- nested subprogramlar yazılabilir
+
+-fonksiyon çağrımlarında return değerini ignore edemezsiniz. Yani fonksiyonları bir statement olarak kullanamazsınız. Fonksiyonu çağrıcaksanız return değerini mutlaka bir değişkene atamak gerekir
+	Res : Integer := Double (Double (I));
+	
+	Double (I);
+    --  ERROR: cannot use call to function "Double" as a statement
+	
+-ADA da parametrelerin tipleri vardır bu tipler. Default parametre modu ise "in" dir.
+	in -> Parameter can only be read, not written
+	out -> 	Parameter can be written to, then read
+	in out -> 	Parameter can be both read and written
+	
+-"in" parameter. default mode in olduğu için parametre olarak verilen A ve B değişkenleri değiştirilemez sadece okuma işlemleri yapılabilir.
+		 procedure Swap (A, B : Integer) is
+		   Tmp : Integer;
+		begin
+		   Tmp := A;
+
+		   --  Error: assignment to "in" mode parameter not allowed
+		   A := B;
+		   --  Error: assignment to "in" mode parameter not allowed
+		   B := Tmp;
+		end Swap;
+		
+- "Forward declaration". ADA C'deki gibi alt fonksiyonlar üst fonksiyonları çağıramaz. Böyle bir ihtiyaç duyulduğunda alt program tam olarak tanımlanmadan oluşturulabilir. Alt tarafta sonradan tanımlanır.
+
+    procedure Compute_A (V : Natural);
+    --  Forward declaration of Compute_A
+
+    procedure Compute_B (V : Natural) is
+    begin
+       if V > 5 then
+          Compute_A (V - 1);
+          --  Call to Compute_A
+       end if;
+    end Compute_B;
+	
+	procedure Compute_A (V : Natural) is
+    begin
+       if V > 2 then
+          Compute_B (V - 1);
+          --  Call to Compute_B
+       end if;
+    end Compute_A;
+	
+- Modular programming
+  with -> Bu keyword ile pakate bağımlılığı gösterirsiniz. (like include)
+  use -> Bu keyword ile paket içerisindeki bir nesneye erişmek için paketin adını kullanmanıza gerek kalmıyor. Eğer "use PaketAdı" kullanmazsanız, paket içerisindeki bir nesneye erişmek için paket adıyla erişmeniz gerekmektedir.
+  
+  .ads files -> Ada specification -> C'deki header   | Java'daki interface
+  .adb files ->  Ada body -> C'deki class   | Java'daki Interfacein implement edilmiş hali
+  
+  
+  -----ADS FILE EXAMPLE ------
+  package Operations is
+
+	function Get_Increment_Value return Integer;
+
+  end Operations;
+  
+  
+  ------ADB FILE EXAMPLE------------
+  package body Operations is
+
+	   Last_Increment : Integer := 1;
+
+	   function Get_Increment_Value return Integer is
+	   begin
+		  return Last_Increment + 5;
+	   end Get_Increment_Value;
+
+  end Operations;
+  
