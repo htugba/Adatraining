@@ -1,0 +1,46 @@
+• A subprogram in Ada can be either a procedure or a function. A procedure does not return a value when called.
+• with keyword similar to import, #include
+• For comments use --
+• There is no multi-line comment syntax.
+• Ada.Text_IO contains procedure to print text on the screen: Put_Line( ) 
+• Get_Line( ) function ->  receive input from the user, as a string
+
+If - Else:
+  • if condition then
+     	 …
+    end if
+  • Condition must be a Boolean value
+  • Terminates with end if
+  • In condition use or keyword for |
+  • In condition use only one = for ==
+  • Use elsif for else if     
+ 
+• You can use 10 .. 50 for discrete ranges --> [10,50]
+• Use & for concatenate String values in Put_Line( )
+• Integer’Image( ) is a function that takes an Integer and converts it to a String
+ 
+Loops:
+  • for . . . loop
+    	. . .
+    end loop ;   
+ 
+  • loop 
+    	. . .
+    exit when condition;
+    end loop;
+ 
+  • while condition loop
+   	 . . .
+    end loop;
+ 
+Switch Case:
+  • case … is
+      when … =>
+      when others => 
+        exit;
+    end case; 
+
+  • Use | for combination of two
+    (e.g. when 0 | 10 =>)
+  • When execution of a branch has completed, control resumes after the end case. The execution does not fall through to the next branch. 
+  • Ada doesn’t have a break statement
