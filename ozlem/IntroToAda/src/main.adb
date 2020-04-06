@@ -87,9 +87,23 @@ procedure Main is
          number := number - 1;
       end loop;
    end decrementAndWrite;
+   
 
+   -------------------Read String Line-------------------
+   procedure readStringLine is
+   begin
+      Put_Line("Enter name: ");
 
-   -------------------Case Statement-------------------
+      declare
+         name : String := Get_Line;
+      begin
+         Put_Line("Hello " & name);
+      end;
+
+   end readStringLine;
+   
+   
+    -------------------Case Statement-------------------
    procedure checkNumberRange is
      number: Integer;
 
@@ -107,21 +121,6 @@ procedure Main is
            Put_Line("Exceptional case");
       end case;
    end checkNumberRange;
-
-
-   -------------------Read String Line-------------------
-   procedure readStringLine is
-   begin
-      Put_Line("Enter name: ");
-
-      declare
-         name : String := Get_Line;
-      begin
-         Put_Line("Hello " & name);
-      end;
-
-   end readStringLine;
-
 
 begin isEvenOrOddCaseExpression; --procedure call
 
