@@ -1,0 +1,21 @@
+2 kind of subprograms in Ada -> functions(returns a value) and procesdures(not return a value).
+
+If a function does not have a parameter then () is not used. 
+	function a(I : Integer) return Integer
+	function a return Integer
+
+Rules for parameters:
+	Positional parameters come first.
+        A positional parameter cannot follow a named parameter.
+
+A subprogram parameter can be specified with a mode, which is one of the following:
+	in	Parameter can only be read, not written
+	out	Parameter can be written to, then read
+	in out	Parameter can be both read and written
+The default mode for parameters is in.
+
+To return multiple values from a subprogram is to use out parameters.
+	procedure Read_Int (Stream : Network_Stream; Success : out Boolean; Result : out Integer);
+	function Read_Int (Stream : Network_Stream; Result : out Integer) return Boolean;
+
+
