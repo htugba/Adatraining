@@ -1,0 +1,9 @@
+Accessing entities from a package uses the dot notation, A.B (If you use only "with package" do not use "use package")
+
+Body of the package cannot used as a main module so you have to use it in a main module. 
+And compile and run as:
+	$ gprbuild -q -P main -gnatwa
+	$ ./main
+
+
+
