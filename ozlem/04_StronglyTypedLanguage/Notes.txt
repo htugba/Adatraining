@@ -1,0 +1,34 @@
+You can define your own integer typess in ADA.
+	type My_Int is range -1 .. 20;
+
+Integer Ada type is defined as:
+	type Integer is range -(2 ** 31) .. +(2 ** 31 - 1);
+
+Several subtypes can be defined in the standard package in Ada.
+	subtype Natural  is Integer range 0 .. Integer'Last;
+	subtype Positive is Integer range 1 .. Integer'Last;
+
+Boolean Ada type is defined as:
+	type Boolean is (False, True); --enumaration
+
+You can define an Enumaration with "type".
+	type Days is (Monday, Tuesday, Wednesday,
+                 Thursday, Friday, Saturday, Sunday);
+
+' is used to Attribute accessing.
+	Name'Attribute (optional params) 
+	My_Int'Image (I)
+	Integer'Image (I)
+
+User specify the precision for a floating-point type, expressed in terms of decimal digits.
+	type T is digits <number_of_decimal_digits>;
+
+SubType can be set to upper type. Example:
+	type Days is (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday);
+	subtype Weekend_Days is Days range Saturday .. Sunday;
+	 S : Days := Sunday;
+	 M : Days := Monday;
+   	 W1 : Weekend_Days := S; --There is no need to conversion. Because Weekend_Days and Days are same type.
+	 W2 : Weekend_Days := M; --Uncorrect. Compiles, but exception at runtime. Because M is not a Weekend_Day.
+
+
