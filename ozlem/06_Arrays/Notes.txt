@@ -1,0 +1,23 @@
+A (B), can be a function call or an array subscript, depends on what A refers to.
+
+Starting Index and Ending Index of an array can be changed by developer. Example: 
+	type Index is range 2 .. 7;
+	type My_Int_Array is array (Index)  --Index of this array starts from 2 so My_Int=array(2) is first element of array.
+
+When array is created, the indexing operation is strongly typed. So, you can not give another type as index. Example:
+	type My_Index   is range 1 .. 5;
+   	type Your_Index is range 1 .. 5;
+	type My_Int_Array is array (My_Index) of My_Int;
+	i : Your_Index := 1;
+	arr: My_Int_Array := (2, 3, 5, 7, 11);
+	arr(i); --Compile time error. You have to give index from My_Index. Because index of array is set as (My_Index).
+
+First index of Array: arr'First
+Last index of Array : arr'Last
+All array indexes   : arr'Range
+Length of array	    : arr'Length
+
+If you set Array index as (Integer range<>) than when you give array values, first index will be set as -2147483648 and last as -2147483646.
+Indexes set as number of values.
+
+<> means "what is expected here can be anything".
