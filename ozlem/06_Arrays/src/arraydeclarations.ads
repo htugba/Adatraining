@@ -5,9 +5,7 @@ package ArrayDeclarations is
    procedure arrayDeclarationWithoutIndexDeclaration;
    
    procedure arrayIndexBoundsExample;
-   
-   procedure enumIndexAndMap;
-   
+      
    procedure rangeAttributeExample;
    
    procedure unconstraintArrayExample;

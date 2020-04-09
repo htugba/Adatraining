@@ -1,12 +1,14 @@
 with Ada.Text_IO; use Ada.Text_IO;
 with ArrayDeclarations;
+with EnumArrayIndexAndMap;
+with StringTypeArray;
 
 procedure Main is
 
    procedure callArrayDeclarationsExamples is
+      use ArrayDeclarations;
    begin
-      --ArrayDeclarations.arrayIndexBoundsExample;
-      --ArrayDeclarations.enumIndexAndMap;
+      --arrayIndexBoundsExample;
       --ArrayDeclarations.arrayDeclarationWithoutIndexDeclaration;
       --ArrayDeclarations.arrayDeclarationWithoutIndexAndValuesDeclaration;
       --ArrayDeclarations.rangeAttributeExample;
@@ -15,7 +17,9 @@ procedure Main is
    end callArrayDeclarationsExamples;
 
    begin
-      --callArrayDeclarationsExamples;
+   --callArrayDeclarationsExamples;
+   --StringTypeArray.predefinedArrayStringType;
+   EnumArrayIndexAndMap.enumIndexAndMap;
 
 end Main;
 

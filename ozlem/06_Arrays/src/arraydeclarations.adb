@@ -4,12 +4,12 @@ package body ArrayDeclarations is
 
     -------------Array Declaration Without Index and Values Types---------------
    procedure arrayDeclarationWithoutIndexAndValuesDeclaration is
-     type Int_Array is array (5..9) of Integer;
+      type Int_Array is array (Natural range<>) of Integer;
       
      numberArray : Int_Array := (1024, -8944, 14755, -4, 9654744);
       
    begin
-      for i in 5..9 loop
+      for i in numberArray'Range loop
          Put_Line(Integer'Image(numberArray(i)));
       end loop;
       
@@ -45,28 +45,6 @@ package body ArrayDeclarations is
          Put(arrayValues'Image(numbersArray(i)));
       end loop;
    end arrayIndexBoundsExample;
-   
-   
-   ---------------Enum Index of Array/Mapping Mechanism in Ada------------------
-   procedure enumIndexAndMap is
-      type Month_Index is (Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec);
-      type Month_Duration_Values is range 1..31;
-      
-      type ArrayOfMonth is array (Month_Index) of Month_Duration_Values;
-      
-      durationOfEachMonthArr : constant ArrayOfMonth :=
-           (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
-         
-      durationOfFeb : Month_Duration_Values := durationOfEachMonthArr(Feb);
-         
-   begin
-      Put_Line(Month_Duration_Values'Image(durationOfFeb));
-      
-      for M in Month_Index loop
-         Put_Line(Month_Index'Image(M) & " has "
-                  & Month_Duration_Values'Image(durationOfEachMonthArr(M)) & " days.");
-      end loop;
-   end enumIndexAndMap;
    
    
    -----------------------------Range Attribute---------------------------------

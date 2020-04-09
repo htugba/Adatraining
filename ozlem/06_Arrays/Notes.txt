@@ -21,3 +21,35 @@ If you set Array index as (Integer range<>) than when you give array values, fir
 Indexes set as number of values.
 
 <> means "what is expected here can be anything".
+
+The standard String type in Ada is an array. String is defined as Charactar arr in Ada: 
+	type String is array (Positive range <>) of Character;
+
+You cannot change the array's bounds (and therefore its size) after it has been initialized. Example: 
+	declare
+   		A : String := "Hello";
+	begin
+   		A := "World";       --  OK: Same size
+   		A := "Hello World"; --  Not OK: Different size
+	end;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
