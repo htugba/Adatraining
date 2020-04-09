@@ -23,4 +23,57 @@ package body EnumArrayIndexAndMap is
       end loop;
    end enumIndexAndMap;
    
+   ---------------------Returning unconstrained arrays--------------------------
+   procedure returnAnUnconstrainedString is
+      type Days is (Mon, Tue, Wed, Thu, Fri, Sat, Sun);
+      
+      function getDayName  (day : Days) return String is
+      begin
+         return
+           (case day  is
+               when Mon => "Monday",
+               when Tue => "Tuesday",
+               when Wed => "Wednesday",
+               when Thu => "Thursday",
+               when Fri => "Friday",
+               when Sat => "Saturday",
+               when Sun => "Sunday");
+          
+      end getDayName ;
+   begin
+      Put_Line("First day is " & getDayName(Days'First));
+   end returnAnUnconstrainedString;
 end EnumArrayIndexAndMap;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,7 @@
 package StringTypeArray is
 
-    procedure predefinedArrayStringType;
+   procedure predefinedArrayStringType;
+
+   procedure splitStringAndConcat;
 
 end StringTypeArray;

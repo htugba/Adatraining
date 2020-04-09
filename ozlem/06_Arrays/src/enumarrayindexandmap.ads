@@ -1,5 +1,7 @@
 package EnumArrayIndexAndMap is
 
-    procedure enumIndexAndMap;
+   procedure enumIndexAndMap;
+
+   procedure returnAnUnconstrainedString;
 
 end EnumArrayIndexAndMap;

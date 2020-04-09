@@ -25,4 +25,21 @@ package body StringTypeArray is
            
    end predefinedArrayStringType;
    
+    -------------------------String split and concat-----------------------------
+   procedure splitStringAndConcat is
+      message : String := "Name is ....";
+      nameSurname : String := "Adam Fesrt";
+      
+     
+   begin
+       declare
+         onlyName: String := nameSurname(1..4);
+      begin
+         message(9..12) := onlyName;
+      end;
+      
+      Put_Line(message);
+      
+   end splitStringAndConcat;
+   
 end StringTypeArray;

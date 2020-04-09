@@ -9,17 +9,19 @@ procedure Main is
       use ArrayDeclarations;
    begin
       --arrayIndexBoundsExample;
-      --ArrayDeclarations.arrayDeclarationWithoutIndexDeclaration;
-      --ArrayDeclarations.arrayDeclarationWithoutIndexAndValuesDeclaration;
-      --ArrayDeclarations.rangeAttributeExample;
-      --ArrayDeclarations.unconstraintArrayExample;
+      --arrayDeclarationWithoutIndexDeclaration;
+      --arrayDeclarationWithoutIndexAndValuesDeclaration;
+      --rangeAttributeExample;
+      --unconstraintArrayExample;
       null;
    end callArrayDeclarationsExamples;
 
    begin
    --callArrayDeclarationsExamples;
    --StringTypeArray.predefinedArrayStringType;
-   EnumArrayIndexAndMap.enumIndexAndMap;
+   --EnumArrayIndexAndMap.enumIndexAndMap;
+   EnumArrayIndexAndMap.returnAnUnconstrainedString;
+   --StringTypeArray.splitStringAndConcat;
 
 end Main;
 
