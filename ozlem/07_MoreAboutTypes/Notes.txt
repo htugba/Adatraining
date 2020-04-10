@@ -1,0 +1,17 @@
+To specify the default value for a component, you can use the "<>" notation.
+	type Point is record
+      		X, Y : Integer := 0;
+   		end record;
+	type Point_Array is array (Positive range <>) of Point;
+
+You can use the "|" symbol to give several components the same value.
+	Origin   : Point := (X | Y => <>);
+
+You can use the "others" choice to refer to every component that has not yet been specified, provided all those fields have the same type.
+	Origin_2 : Point := (others => <>);
+
+You can use the range notation ".." to refer to specify a contiguous sequence of indices in an array.
+	Points_2 : Point_Array := (1 => (1, 2), 2 => (3, 4), 3 .. 20 => <>);
+
+Overloading can be used in Ada. Ada can have functions that have the same name, but different types for their parameters.
+
