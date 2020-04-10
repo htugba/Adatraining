@@ -15,3 +15,15 @@ You can use the range notation ".." to refer to specify a contiguous sequence of
 
 Overloading can be used in Ada. Ada can have functions that have the same name, but different types for their parameters.
 
+delta: A reserved word, used in declaring a fixed-point type. It determines the precision or spacing between adjacent values. (Delta is also an attribute.)	
+	type T3_D3 is delta 10.0 ** (-3) digits 3;  --The delta value of T3_D3 is 0.001
+						    --The minimum value of T3_D3 is -0.999
+						    --The maximum value of T3_D3 is 0.999
+   	type T6_D3 is delta 10.0 ** (-3) digits 6;  --The delta value of T6_D3 is 0.001
+						    --The minimum value of T6_D3 is -999.999
+						    --The maximum value of T6_D3 is 999.999
+	D : constant := 2.0 ** (-31);
+   	type TQ31 is delta D range -1.0 .. 1.0 - D; --TQ31 requires 32 bits
+						    --The delta value of TQ31 is 0.0000000005
+						    --The minimum value of TQ31 is -1.0000000000
+						    s--The maximum value of TQ31 is 0.9999999995

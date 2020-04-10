@@ -2,6 +2,8 @@ with Ada.Text_IO; use Ada.Text_IO;
 with ConvenientShortcuts;
 with Overloading;
 with AccessTypesPointers;
+with Recursion;
+with CharacterTypes;
 
 procedure Main is
 
@@ -30,5 +32,7 @@ procedure Main is
 begin
    --ConvenientShortcuts.shortcutsForConvenience;
    --useOverLoadingExample;
-   useAccessTypesPointers;
+   --useAccessTypesPointers;
+   --Recursion.printAndDecrement(10);
+   CharacterTypes.charExample;
 end Main;
