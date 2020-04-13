@@ -1,0 +1,56 @@
+-- Conditional Expressions --
+
+- If expression: -
+• All branch expressions must be same type
+• It must be surrounded by parentheses 
+	• (if .. then .. else ..)
+• else branch is necessary unless the expression following 'then' has a Boolean value
+
+- Case expression: -
+• The syntax differs from case statements  (there is no comma for separation), in case expression branches separated by commas
+
+--  Subprograms  --
+
+• Subprograms in Ada --> functions and procedures. 
+• A function returns a value, a procedure does not.
+• If a subprogram does not have a parameter, there is no section for it. 
+
+function Func1 (I : Integer) return Integer; -- gets parameter
+function Func2 return Integer; -- no parameter
+
+• If we call a function with no parameter, unlike most programming language, we do not use parentheses.
+
+Func1 ;
+
+- Nested Subprograms -
+• Ada allows to declare one subprogram inside of another
+• ”helper” for another subprogram should be declared nested.
+• Nested subprograms have access to the parameters and local variables
+
+- Function Calls -
+• The return value of a function at a call cannot be ignored, even if you do not need its result
+
+- Parameter modes -
+in --> only read, not written (like pass by value but more restricted)
+out --> written to, then read
+in out --> both read and written 
+• The default mode for parameters is in
+
+- Subprogram calls -
+In parameters:
+These parameters cannot be modified
+
+In out parameters:
+procedure Smt (A, B : in out Integer) is
+
+Out parameters:
+Out parameters behave a bit like return values for functions
+A way to return multiple values from a subprogram --> use out parameters
+
+
+
+
+
+
+
+
