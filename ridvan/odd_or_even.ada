@@ -6,7 +6,8 @@ use Ada.Integer_Text_IO;
 procedure Odd_or_Even is
    N : Integer;
 begin
-   Put ("Enter an integer value: ");  -- Put a String
+   -- Bu method integer degeri alir ve tek mi çift mi kontrol eder.
+   Put ("Enter an integer value: "); 
    Get (N);  --  Reads in an integer value
    Put (N);  --  Put an Integer
    if N rem 2 = 0 then
