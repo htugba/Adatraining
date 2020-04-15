@@ -1,0 +1,27 @@
+   
+-Records -> bildiğimiz struct yapısı
+	type Date is record
+	   Day   : Integer range 1 .. 31;
+	   Month : Month_Type := January;
+	   Year  : Integer range 1 .. 3000 := 2012;
+	end record;
+
+- Array definition
+	Arr : My_Int_Array := (2, 3, 5, 7, 11);
+
+- genel kullanılan array fonksiyonları
+	First index of Array: arr'First
+	Last index of Array : arr'Last
+	All array indexes   : arr'Range
+	Length of array	    : arr'Length
+
+-The standard String type in Ada is an array. String is defined as Charactar arr in Ada: 
+	type String is array (Positive range <>) of Character;
+
+-You cannot change the array's bounds (and therefore its size) after it has been initialized. Example: 
+	declare
+   		A : String := "Hello";
+	begin
+   		A := "World";       --  OK: Same size
+   		A := "Hello World"; --  Not OK: Different size
+	end;

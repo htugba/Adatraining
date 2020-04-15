@@ -1,0 +1,29 @@
+- type compile time construct olarak geçmekte. Değişkenlerin geçersiz değerlere sahip olmasını engeller.
+- Every type declaration in Ada starts with the type keyword (except for task types).
+- A nice feature of Ada is that you can define your own integer types
+	 type My_Int is range -1 .. 20;
+	 type Integer is range -(2 ** 31) .. +(2 ** 31 - 1);
+	 A : Integer := Integer'Last; --> Last fonksiyonu ile değişkene maximum integer değeri verilir.
+	 
+- İki türlü overflow vardır;
+	Machine-level overflow
+	Type-level overflow
+	
+-Enumeration  types
+	 type Days is (Monday, Tuesday, Wednesday,Thursday, Friday, Saturday, Sunday);
+	  
+- Floating types
+	type T_Norm  is new Float range -1.0 .. 1.0;
+	 A  : T_Norm;
+
+-Strong Typing - Belirli bir isimle kendine özel typler üretilebilir.
+	type Miles is new Float;
+	Dist_Imperial : Miles;
+	
+-Subtypes - belirlir bir typedan üretilebilir
+   type Days is (Monday, Tuesday, Wednesday, Thursday,
+                 Friday, Saturday, Sunday);
+
+   --  Declaration of a subtype
+   subtype Weekend_Days is Days range Saturday .. Sunday;
+	
