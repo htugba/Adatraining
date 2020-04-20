@@ -1,0 +1,6 @@
+package standardAndCustomExceptions is
+
+   procedure divideByZeroException;
+   procedure divideByZeroExceptionHandling;
+   procedure divideWithCustomException(number : Integer; divideBy : Integer);
+end StandardExceptions;
