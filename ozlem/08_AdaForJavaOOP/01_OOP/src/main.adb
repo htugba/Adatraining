@@ -1,4 +1,4 @@
-with Inheritance, InheritanceWithPrivateSection, RealClassAndInheritance, InitializersFinalizersControlled, Abstraction;
+with Inheritance, InheritanceWithPrivateSection, RealClassAndInheritance, InitializersFinalizersControlled;
 with Ada.Text_IO; use Ada.Text_IO;
 
 procedure Main is
