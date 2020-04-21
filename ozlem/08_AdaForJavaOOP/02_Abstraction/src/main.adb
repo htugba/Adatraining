@@ -9,6 +9,8 @@ begin
    savingsAccount.accountOwner := 1;
    savingsAccount.taxIDNumber := 2;
    savingsAccount.minimum_Balance := 453.07;
-   --savingsAccount.Open(savingsAccount); --!!!Why i cannot use Open procedure in Savings_Account_Package
+
+   -- !!!!!! Why cannot be used "Open" procedure in Savings_Account_Package
+   --savingsAccount.Open(savingsAccount);
    --savingsAccount.Close(savingsAccount);
 end Main;
