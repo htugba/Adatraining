@@ -1,10 +1,14 @@
-with Bank_Account_Package, Savings_Account_Package;
+with Savings_Account_Package; use Savings_Account_Package;
+with Ada.Text_IO; use Ada.Text_IO;
 
 procedure Main is
-   use Savings_Account_Package;
-   --savedAccount : Savings_Account_Type;
+
+   savingsAccount : Savings_Account_Type;
 begin
-   -- Problem !!!
-   -- I dont understand why "account.Account_Number" cant be used.
-   null;
+   savingsAccount.accountNumber := 10;
+   savingsAccount.accountOwner := 1;
+   savingsAccount.taxIDNumber := 2;
+   savingsAccount.minimum_Balance := 453.07;
+   --savingsAccount.Open(savingsAccount); --!!!Why i cannot use Open procedure in Savings_Account_Package
+   --savingsAccount.Close(savingsAccount);
 end Main;
