@@ -1,0 +1,8 @@
+type T is private; -- T is a constrained type, such as Integer
+type T (<>) is private; -- T can be an unconstrained type, such as String
+type T is tagged private; -- T is a tagged type
+type T is new T2 with private; -- T is an extension of T2
+type T is (<>); -- T is a discrete type
+type T is range <>; -- T is an integer type
+type T is digits <>; -- T is a floating point type
+type T is access T2; -- T is an access type, T2 is its designated type
