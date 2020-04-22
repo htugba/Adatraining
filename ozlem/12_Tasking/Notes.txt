@@ -1,1 +1,13 @@
-Task can be called a thread, and tasking can be called multithreading.
+Task can be called as a thread, and tasking can be called as multithreading.
+
+When you define a thread in a package, "with package" thread starts automatically. If you dont want starting auto, 
+then use "entry" task and accept this task when calling is needed.
+
+protectedObjects : When multiple tasks are accessing shared data, corruption of that data may occur. 
+		   Protected objects encapsulate data and provide access to that data by means of protected operations:
+			-subprograms (get, set subprograms are used)
+			-protected entries (entry keyword is used)
+
+You can created types from Task and Protected objects with "type" keyword.
+
+

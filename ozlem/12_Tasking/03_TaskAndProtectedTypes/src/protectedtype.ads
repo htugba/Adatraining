@@ -1,6 +1,6 @@
-package ProtectedObjectsPackage is
+package ProtectedType is
 
-   protected Obj is 
+   protected type ObjType is --Defined as type
       --Operations in there
       procedure set(val : Integer);
       function get return Integer;
@@ -8,5 +8,5 @@ package ProtectedObjectsPackage is
    private 
       --Data in there
       local : Integer := 0;
-   end Obj;
-end ProtectedObjectsPackage;
+   end ObjType;
+end ProtectedType;

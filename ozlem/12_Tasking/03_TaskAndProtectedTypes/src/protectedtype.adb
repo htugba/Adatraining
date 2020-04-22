@@ -1,6 +1,6 @@
-package body ProtectedObjectsPackage is
+package body ProtectedType is
 
-   protected body Obj is 
+   protected body ObjType is 
       procedure set(val : Integer) is 
       begin 
          local := val;
@@ -10,6 +10,6 @@ package body ProtectedObjectsPackage is
       begin 
          return local;
       end get;
-   end Obj;
+   end ObjType;
    
-end ProtectedObjectsPackage;
+end ProtectedType;
