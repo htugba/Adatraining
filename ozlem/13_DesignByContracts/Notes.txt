@@ -1,0 +1,16 @@
+Pre and post conditions provide expectations regarding input and output parameters of subprograms and return value of functions.
+It is used like:
+	with Pre => <condition>
+	with Post => <condition>
+
+pragma is used to force the compiler to generate code to check the pre or post condition. 
+
+You can use pre and post conditions together:
+	procedure example with Pre  => ..., Post => ...;
+
+Predicates provide expectations for Types.
+Static and dynamic predicates are specified using the following clauses:
+	with Static_Predicate => <property>
+	with Dynamic_Predicate => <property>
+
+
