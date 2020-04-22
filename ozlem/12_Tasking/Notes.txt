@@ -1,0 +1,1 @@
+Task can be called a thread, and tasking can be called multithreading.
