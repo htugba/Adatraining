@@ -46,9 +46,7 @@ procedure Smt (A, B : in out Integer) is
 Out parameters:
 Out parameters behave a bit like return values for functions
 A way to return multiple values from a subprogram --> use out parameters
-
-
-
+- from the user’s perspective an out parameter -> an uninitialized variable (when the subprogram is invoked)
 
 
 
