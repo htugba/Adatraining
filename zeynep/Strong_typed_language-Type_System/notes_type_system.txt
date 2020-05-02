@@ -1,0 +1,67 @@
+- Floating point literal must be written with both an integral and decimal part. 
+	10 is not a valid 
+	10.0 is valis
+- enum --> type keyword
+- Range constraint for types --> range reserved word
+	type Grade is range 0 .. 100;
+- Types can be derived from the representation of any other type.
+	type Failed is new Grade range 0 .. 40;
+	type Weekend_Day is new Day range Saturday .. Sunday;
+- A subtype is a type with optional additional constraints.
+	subtype Weekend_Day is Day range Saturday .. Sunday;
+
+-- Attributes
+- Attributes start with a single apostrophe (')
+- To determine; 
+	- the first and last bounds of scalar types, 
+	- get the sizes of objects and types, 
+	- convert values to and from strings.
+- 'Image --> convert a value into a string
+- 'Value --> get the value of String (convert into wanted type)
+	Put_Line (Integer'Image (A));
+	A := Integer'Value ("99");
+- 'Pred --> get previous value
+
+-- Arrays
+- Any discrete type can be an array index
+- The lower bound doesn’t have to be 0.
+- defining an array;
+	type Arr_Type is array (Integer range <>) of Integer;
+- usage of <> specifies "no constraints".
+- Arrays have 'Range attribute 
+- Ada Strings are arrays of Characters
+- Copying an array to another;
+	A1 : Arr_Type (1 .. 2);
+	A2 : Arr_Type (1 .. 2);
+	..
+	A2 := A1;
+- the source and destination arrays must have exactly the same number of elements (for copying)
+- Comparing the contents of arrays;
+	if A1 = A2 then
+- Declaring array elements;
+	A1 := (1, 2, 3, others => 10); -- other elements of A will be 10.
+	A2 (11 .. 19) := (others => 1); -- 11 to 19th elements will be 1.
+
+-- Heterogeneous Data Structures
+- No distinction between struct and class
+- All heterogeneous data structures are records
+- Ada allows specification of default values for fields.
+	for Integer = 0 like C++ and Java.
+- others => <> specifies that fields will take their default values.
+- V2 := V1; -- V1 and V2 are type of record
+	- V1 and V2 are two different (distinct) objects
+	- the assignment statement copies the value of V1 into V2.
+- there’s no garbage collector in Ada,
+	 so objects allocated by the new operator need to be freed by user
+- To explicitly dereference an access variable --> .all
+	Var : A_Int := new Integer;
+	Var.all := 0;
+- Access type can be either -> access all OR access constant
+- Use access all --> if the referenced object needs to be assigned to
+- Use access constant --> if the referenced object is a constant
+- 'Access attribute works like the C++ &
+- To deallocate objects from the heap -> a generic procedure is defined
+	it’s ---> Ada.Unchecked_Deallocation
+	- for this procedure we should provide the object type as well as the access type
+	-- procedure Free is new Ada.Unchecked_Deallocation (Integer, Integer_Access);
+	 

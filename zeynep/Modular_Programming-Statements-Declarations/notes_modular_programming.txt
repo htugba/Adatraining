@@ -1,0 +1,6 @@
+-- packages
+
+- with clause indicates a dependency on another package.
+- Making every entity of a package visible directly in the current scope -> use clause
+- Body of a function has to be declared in the body of the package.
+- Entities declared in the body of the package are only visible in the body.

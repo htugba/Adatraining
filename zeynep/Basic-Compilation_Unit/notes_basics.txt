@@ -1,0 +1,5 @@
+- begin and end are used for curly braces.
+- There is not multiple-line comments.
+- Reserved words are case insensitive. (there are 73 reserved words)
+- Identifiers must always start with a letter.
+- A identifier cannot start with underline.

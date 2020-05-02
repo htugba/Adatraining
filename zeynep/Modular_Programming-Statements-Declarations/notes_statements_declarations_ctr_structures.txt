@@ -1,0 +1,12 @@
+- Ada uses a regular assignment statement for incrementation
+	X := X + 1;
+- Ada does not provide ++ or -- shorthand expressions for increment/decrement operations
+- Empty sequence of statements are not allowed. At least a null; statement should be provided.
+	begin
+		null;
+	end;
+- loop iteration in decreasing order -> use reverse keyword 
+	for Variable in reverse 0 .. 9 loop
+- If there is a list containing integer values,
+iteration over the elements of the list--> of keyword 
+	for I of Int_List loop 

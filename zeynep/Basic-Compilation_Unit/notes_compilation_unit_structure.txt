@@ -1,0 +1,11 @@
+- Ada compilation units are generally split into two parts;
+ 	- the specification,
+	- the body
+- compilation units are stored in files --> .ads extension
+- implementations --> .adb extension
+- with clause is different from how include work in C++
+- with clause directs the compiler to make the public interface of a package visible to code in the unit containing the with clause
+- use clause --> using namespace in C++ / import in Java
+- package -> compilation unit
+- private part of a package --> protected member of a C++ or Java class.
+- An entity declared in the body of an Ada package -> private member of a C++ or Java class.

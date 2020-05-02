@@ -1,0 +1,22 @@
+- For predefined types;
+	type My_Type is range -1 .. 20;
+	Put_Line (My_Type'Image (I));
+- ** is the exponent operator
+- abs( ) is absolute value operator
+- There are two types of overflow checks;
+	- Machine-level overflow : exceeds the max/min value 
+	storage reserved for an object of the type.
+	- Type-level overflow : outside the range defined for the type.
+- 'Size is used to retrieve the number of bits used for the specified data type
+- Defining a type with a precision
+	- type T6_type is digits 6 range -1.0e-4 .. 1.0e-4;
+- a value of one type cannot be assigned to a variable from the other type.
+	-- even if they created from same type
+- Type conversions must be made explicit
+- To convert a type to another type functions can be used.
+- To create new types based on existing ones;
+	type New_type is new Integer range 0 .. 10;
+	-- New_type is a derived type --> its parent type is Integer
+- While defining a derived type that its parent is a enum type, range operator can be used.
+- enforce constraints on some values while staying within a single type -> subtypes
+- 
