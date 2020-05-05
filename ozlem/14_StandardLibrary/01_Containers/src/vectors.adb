@@ -1,6 +1,3 @@
-with Ada.Containers; use Ada.Containers;
-with Ada.Containers.Vectors;
-
 with Ada.Text_IO; use Ada.Text_IO;
 
 package body Vectors is

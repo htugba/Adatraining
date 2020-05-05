@@ -8,3 +8,13 @@ VECTOR
 
 -- To concatenate diffent vectors:
 	V := V1 & V2 & V3;
+
+SET
+
+-- Basic Set Operations : Insert, Include, Replace, Delete, Exclude, Find
+
+-- Other Set Operations : Union(and), Intersection(or), Difference(-), Symmetric difference(xor)
+
+
+
+

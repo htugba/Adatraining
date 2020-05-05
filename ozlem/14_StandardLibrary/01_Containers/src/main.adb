@@ -1,16 +1,31 @@
-with Vectors;
+with Vectors, Sets, Maps;
 
 procedure Main is
-   use Vectors;
-   procedure useVectorExample is
+   procedure useVectorExamples is
+      use Vectors;
    begin
       showVectorInstantiation;
       showVectorAppend;
       accessFirstAndLastElement;
       showAllElementsOfVector;
-   end useVectorExample;
+   end useVectorExamples;
+
+   procedure useSetExamples is
+      use Sets;
+   begin
+      setOperations;
+   end useSetExamples;
+
+   procedure useMapExamples is
+      use Maps;
+   begin
+      hashMapOperations;
+      orderedMapOperations;
+   end useMapExamples;
 
 begin
-  useVectorExample;
+   useVectorExamples;
+   useSetExamples;
+   useMapExamples;
 end Main;
 
