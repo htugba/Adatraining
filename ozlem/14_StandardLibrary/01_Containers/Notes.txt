@@ -1,0 +1,10 @@
+VECTOR
+
+-- To swap vector elements:
+	V.Swap (V.First, V.Last);
+
+-- To get element in the given index:
+	V.Element (I);
+
+-- To concatenate diffent vectors:
+	V := V1 & V2 & V3;
