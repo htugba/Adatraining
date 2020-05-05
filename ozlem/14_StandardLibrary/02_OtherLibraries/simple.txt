@@ -1,0 +1,3 @@
+Simple text file added line #1
+Simple text file added line #2
+Simple text file added line #3
